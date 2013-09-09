@@ -1,0 +1,87 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <PostRequest>
+    <Comment><![CDATA[<para>设置隐私信息 </para>
+<para>URL:</para>
+<para>	http://api.t.sina.com.cn/account/update_privacy.(json|xml)</para>
+<para>支持格式:</para>
+<para>	XML/JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST</para>
+<para>是否需要登录:</para>
+<para>	true  关于授权机制，参见授权机制声明</para>
+<para>请求数限制:</para>
+<para>	true  关于请求数限制，参见接口访问权限说明</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="account/update_privacy.json" />
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	申请应用时分配的AppKey，调用接口时候代表应用的唯一身份。（采用OAuth授权方式不需要此参数）</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="comment">
+        <Comment><![CDATA[<para>comment</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	谁可以评论此账号的微薄。0：所有人，1：我关注的人。默认为0。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="message">
+        <Comment><![CDATA[<para>message</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	谁可以给此账号发私信。0：所有人，1：我关注的人。默认为1。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="realname">
+        <Comment><![CDATA[<para>realname</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	是否允许别人通过真实姓名搜索到我， 0允许，1不允许，默认值1。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="geo">
+        <Comment><![CDATA[<para>geo</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	发布微博，是否允许微博保存并显示所处的地理位置信息。 0允许，1不允许，默认值0。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="badge">
+        <Comment><![CDATA[<para>badge</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	勋章展现状态，值—1私密状态，0公开状态，默认值0。</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+  </PostRequest>
+</root>

@@ -90,7 +90,7 @@ namespace OAuthLib
             var settings = new OAuthLib.OAuthSettings
             {
                 AppKey = this.AppKey,
-                AcessTokenUrl = this.AccessTokenUrl,
+                AccessTokenUrl = this.AccessTokenUrl,
                 AuthorizeUrl = this.AuthorizeUrl,
                 AppSecret = this.AppSecret,
                 RequestTokenUrl = this.RequestTokenUrl

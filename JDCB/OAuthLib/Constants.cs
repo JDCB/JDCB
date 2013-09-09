@@ -24,5 +24,8 @@ namespace OAuthLib
         internal const string OAuthSignature = "oauth_signature";
         internal const string OAuthToken = "oauth_token";
         internal const string OAuthVerifier = "oauth_verifier";
+        internal const string OAuth2AccessTokenExpiresInPattern = @"""expires_in"":(?<expires_in>\d+)";
+        internal const string OAuth2AccessTokenPattern1 = @"\{""access_token"":""(?<token>.{0,32})"",""remind_in"":""(?<remind>\d+)"",""expires_in"":(?<expires>\d+),""uid"":""(?<uid>\d+)""\}";
+        internal const string OAuth2AccessTokenPattern2 = @"\{""access_token"":""(?<token>.{0,32})"",""remind_in"":""(?<remind>\d+)"",""expires_in"":(?<expires>\d+),""refresh_token"":""(?<refreshtoken>.{0,32})"",""uid"":""(?<uid>\d+)""\}";
     }
 }

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <MultiPartPostRequest>
+    <Comment><![CDATA[<para>发表带图片的微博。必须用POST方式提交pic参数，且Content-Type必须设置为multipart/form-data。图片大小<5M。 </para>
+<para>URL:</para>
+<para>	http://api.t.sina.com.cn/statuses/upload.(json|xml)</para>
+<para>支持格式:</para>
+<para>	XML/JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST</para>
+<para>是否需要登录:</para>
+<para>	true  关于授权机制，参见授权机制声明</para>
+<para>请求数限制:</para>
+<para>	true  关于请求数限制，参见接口访问权限说明</para>
+<para></para>
+]]></Comment>
+    <URLTemplate>
+      <Template url="statuses/upload.json" />
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	申请应用时分配的AppKey，调用接口时候代表应用的唯一身份。（采用OAuth授权方式不需要此参数）</para>
+<para></para>
+]]></Comment>
+      </param>
+      <param type="Single" key="status">
+        <Comment><![CDATA[<para>status</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	要发布的微博文本内容。</para>
+<para></para>
+]]></Comment>
+      </param>
+      <param type="Single" key="pic">
+        <Comment><![CDATA[<para>pic</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	binary</para>
+<para>说明:</para>
+<para>	要上传的图片数据。仅支持JPEG、GIF、PNG格式，为空返回400错误。图片大小<5M。</para>
+<para></para>
+]]></Comment>
+      </param>
+      <param type="Single" key="lat">
+        <Comment><![CDATA[<para>lat</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	float</para>
+<para>说明:</para>
+<para>	纬度。有效范围：-90.0到+90.0，+表示北纬。</para>
+<para></para>
+]]></Comment>
+      </param>
+      <param type="Single" key="long">
+        <Comment><![CDATA[<para>long</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	float</para>
+<para>说明:</para>
+<para>	经度。有效范围：-180.0到+180.0，+表示东经。</para>
+<para></para>
+]]></Comment>
+      </param>
+    </Post>
+  </MultiPartPostRequest>
+</root>

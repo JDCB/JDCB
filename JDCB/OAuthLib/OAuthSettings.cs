@@ -21,16 +21,18 @@ namespace OAuthLib
         public static string OAuthVersion = "1.0";
 
         [DataMember]
-        public string AppKey { get;  set; }
+        public string AppKey { get; set; }
         [DataMember]
-        public string AppSecret { get;  set; }
+        public string AppSecret { get; set; }
         [DataMember]
-        public string RequestTokenUrl { get;  set; }
+        public string RequestTokenUrl { get; set; }
         [DataMember]
-        public string AcessTokenUrl { get;  set; }
+        public string AccessTokenUrl { get; set; }
         [DataMember]
-        public string AuthorizeUrl { get;  set; }
+        public string AuthorizeUrl { get; set; }
         [DataMember]
         public string CallbackUrl { get; set; }
+        [DataMember]
+        public string QueryAccessTokenUrl { get; set; }
     }
 }

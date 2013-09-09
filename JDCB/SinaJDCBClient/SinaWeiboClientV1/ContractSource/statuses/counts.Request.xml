@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <GetRequest>
+    <Comment><![CDATA[<para>批量获取n条微博消息的评论数和转发数。一次请求最多可以获取20条微博消息的评论数和转发数 </para>
+<para>URL:</para>
+<para>	http://api.t.sina.com.cn/statuses/counts.(json|xml)</para>
+<para>支持格式:</para>
+<para>	XML/JSON</para>
+<para>HTTP请求方式:</para>
+<para>	GET</para>
+<para>是否需要登录:</para>
+<para>	true  关于授权机制，参见授权机制声明</para>
+<para>请求数限制:</para>
+<para>	true  关于请求数限制，参见接口访问权限说明</para>
+<para></para>
+]]></Comment>
+    <URLTemplate>
+      <Template url="statuses/counts.json" />
+    </URLTemplate>
+    <Query>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	申请应用时分配的AppKey，调用接口时候代表应用的唯一身份。（采用OAuth授权方式不需要此参数）</para>
+<para></para>
+]]></Comment>
+      </param>
+      <param type="Single" key="ids">
+        <Comment><![CDATA[<para>ids</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	int64</para>
+<para>说明:</para>
+<para>	要获取评论数和转发数的微博消息ID列表，用逗号隔开</para>
+<para></para>
+]]></Comment>
+      </param>
+    </Query>
+  </GetRequest>
+</root>

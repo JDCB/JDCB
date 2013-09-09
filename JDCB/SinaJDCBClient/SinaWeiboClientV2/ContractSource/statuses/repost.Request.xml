@@ -1,0 +1,78 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <PostRequest>
+    <Comment><![CDATA[<para>转发一条微博 </para>
+<para>URL:</para>
+<para>	https://api.weibo.com/2/statuses/repost.json</para>
+<para>支持格式:</para>
+<para>	JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST</para>
+<para>是否需要登录:</para>
+<para>	是  关于登录授权，参见 如何登录授权</para>
+<para>访问授权限制:</para>
+<para>	访问级别：普通接口  频次限制：是  关于频次限制，参见 接口访问权限说明</para>
+<para>注意事项:</para>
+<para>	无</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="statuses/repost.json" />
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	采用OAuth授权方式不需要此参数，其他授权方式为必填参数，数值为应用的AppKey。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="access_token">
+        <Comment><![CDATA[<para>access_token</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="id">
+        <Comment><![CDATA[<para>id</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	int64</para>
+<para>说明:</para>
+<para>	要转发的微博ID。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="status">
+        <Comment><![CDATA[<para>status</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	添加的转发文本，必须做URLencode，内容不超过140个汉字，不填则默认为“转发微博”。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="is_comment">
+        <Comment><![CDATA[<para>is_comment</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	是否在转发的同时发表评论，0：否、1：评论给当前微博、2：评论给原微博、3：都评论，默认为0 。</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+  </PostRequest>
+</root>

@@ -266,8 +266,8 @@ namespace OAuthLib
             headers.Add(Constants.OAuthToken, requestToken.Token);
             headers.Add(Constants.OAuthVerifier, verifier);
             
-            var oAuthQuery = ConstructOAuthQueryString(headers, "GET", Settings.AcessTokenUrl, requestToken.Secret);
-            var url = Settings.AcessTokenUrl + "?" + oAuthQuery;
+            var oAuthQuery = ConstructOAuthQueryString(headers, "GET", Settings.AccessTokenUrl, requestToken.Secret);
+            var url = Settings.AccessTokenUrl + "?" + oAuthQuery;
 
             var request = WebRequest.Create(url);
             cancelToken.ThrowIfCancellationRequested();

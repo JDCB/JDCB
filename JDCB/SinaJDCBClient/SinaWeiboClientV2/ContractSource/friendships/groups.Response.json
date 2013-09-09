@@ -1,0 +1,51 @@
+﻿{
+    "lists": [
+        {
+            "id": 221012250012006340,
+            "idstr": "221012250012006330",
+            "name": "同学",
+            "mode": "private",
+            "visible": 0,
+            "like_count": 0,
+            "member_count": 41,
+            "description": "",
+            "tags": [],
+            "profile_image_url": "http://tp3.sinaimg.cn/2476776294/50/5619144918/1",
+            "user": {
+                "id": 1902538057,
+                "idstr": "1902538057",
+                "screen_name": "张三",
+                "name": "张三",
+                "province": "11",
+                "city": "8",
+                "location": "北京 海淀区",
+                "description": "做最受尊敬的互联网产品经理...",
+                "url": "",
+                "profile_image_url": "http://tp2.sinaimg.cn/1902538057/50/22817372040/1",
+                "profile_url": "304270168",
+                "domain": "shenbinzhu",
+                "weihao": "304270168",
+                "gender": "m",
+                "followers_count": 337,
+                "friends_count": 534,
+                "statuses_count": 516,
+                "favourites_count": 60,
+                "created_at": "Sat Dec 25 14:12:35 +0800 2010",
+                "following": false,
+                "allow_all_act_msg": true,
+                "geo_enabled": true,
+                "verified": false,
+                "verified_type": 220,
+                "allow_all_comment": true,
+                "avatar_large": "http://tp2.sinaimg.cn/1902538057/180/22817372040/1",
+                "verified_reason": "",
+                "follow_me": false,
+                "online_status": 0,
+                "bi_followers_count": 185,
+                "lang": "zh-cn"
+            },
+            "created_at": "Sat Dec 25 14:12:35 +0800 2010"
+        }
+    ],
+    "total_number": 13
+}

@@ -1,0 +1,32 @@
+﻿<#@ template debug="true" hostSpecific="True" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="EnvDTE"#>
+<#@ Assembly Name="System.Core"#>
+<#@ Assembly Name="$(SolutionDir)\_Files\SLDllsForT4\System.Xml.dll" #>
+<#@ Assembly Name="$(SolutionDir)\_Files\SLDllsForT4\System.Json.dll" #>
+<#@ Assembly Name="$(SolutionDir)\_Files\SLDllsForT4\System.ServiceModel.Web.dll" #>
+<#@ Assembly Name="$(SolutionDir)\_Files\SLDllsForT4\System.Runtime.Serialization.dll" #>
+<#@ assembly name="System.Xml"#>
+<#@ assembly name="System.Xml.Linq"#>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="System.Json" #>
+<#@include file="$(SolutionDir)\_Files\includes2.ttinclude"#>
+<#
+string fileName=this.Host.TemplateFile;
+string clientClassName=Path.GetFileNameWithoutExtension(fileName);
+string folder=Path.Combine ( Path.GetDirectoryName(fileName) ,"ContractSource");
+string[] jsonfs=Directory.GetFiles(folder,"*.json", SearchOption.AllDirectories);
+string[] xmlfs=Directory.GetFiles(folder,"*.xml", SearchOption.AllDirectories);
+string baseUri="https://api.weibo.com/2";
+string nameSpaceStr="SinaWeiboClientV2";
+WriteAll(fileName,clientClassName,folder,jsonfs,xmlfs,baseUri,nameSpaceStr);
+
+#>

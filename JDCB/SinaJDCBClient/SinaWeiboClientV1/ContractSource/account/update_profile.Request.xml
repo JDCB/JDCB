@@ -1,0 +1,87 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <PostRequest>
+    <Comment><![CDATA[<para>更新当前登录用户在新浪微博上的基本信息。 </para>
+<para>URL:</para>
+<para>	http://api.t.sina.com.cn/account/update_profile.(json|xml)</para>
+<para>支持格式:</para>
+<para>	XML/JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST</para>
+<para>是否需要登录:</para>
+<para>	true  关于授权机制，参见授权机制声明</para>
+<para>请求数限制:</para>
+<para>	true  关于请求数限制，参见接口访问权限说明</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="account/update_profile.json" />
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	申请应用时分配的AppKey，调用接口时候代表应用的唯一身份。（采用OAuth授权方式不需要此参数）</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="name">
+        <Comment><![CDATA[<para>name</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	昵称，不超过20个字符</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="gender">
+        <Comment><![CDATA[<para>gender</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	性别， m 表示男性，f 表示女性。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="province">
+        <Comment><![CDATA[<para>province</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	省份代码，参考省份城市编码表</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="city">
+        <Comment><![CDATA[<para>city</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	城市代码，1000表示不指定具体城市。参考省份城市编码表</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="description">
+        <Comment><![CDATA[<para>description</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	个人描述。不超过70个汉字</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+  </PostRequest>
+</root>

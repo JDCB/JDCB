@@ -1,0 +1,100 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <PostRequest>
+    <Comment><![CDATA[<para>回复一条评论 </para>
+<para>URL:</para>
+<para>	https://api.weibo.com/2/comments/reply.json</para>
+<para>支持格式:</para>
+<para>	JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST</para>
+<para>是否需要登录:</para>
+<para>	是  关于登录授权，参见 如何登录授权</para>
+<para>访问授权限制:</para>
+<para>	访问级别：普通接口  频次限制：是  关于频次限制，参见 接口访问权限说明</para>
+<para>注意事项:</para>
+<para>	无</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="comments/reply.json" />
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	采用OAuth授权方式不需要此参数，其他授权方式为必填参数，数值为应用的AppKey。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="access_token">
+        <Comment><![CDATA[<para>access_token</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="cid">
+        <Comment><![CDATA[<para>cid</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	int64</para>
+<para>说明:</para>
+<para>	需要回复的评论ID。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="id">
+        <Comment><![CDATA[<para>id</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	int64</para>
+<para>说明:</para>
+<para>	需要评论的微博ID。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="comment">
+        <Comment><![CDATA[<para>comment</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	回复评论内容，必须做URLencode，内容不超过140个汉字。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="without_mention">
+        <Comment><![CDATA[<para>without_mention</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	回复中是否自动加入“回复@用户名”，0：是、1：否，默认为0。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="comment_ori">
+        <Comment><![CDATA[<para>comment_ori</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+  </PostRequest>
+</root>

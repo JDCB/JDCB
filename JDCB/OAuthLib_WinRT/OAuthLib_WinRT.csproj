@@ -14,9 +14,6 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-
-
-
     <SccProvider>SAK</SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -124,8 +121,14 @@
     <Compile Include="..\OAuthLib\HttpEncoder.cs">
       <Link>HttpEncoder.cs</Link>
     </Compile>
+    <Compile Include="..\OAuthLib\JDCBOAuth2TokenFactory.cs">
+      <Link>JDCBOAuth2TokenFactory.cs</Link>
+    </Compile>
     <Compile Include="..\OAuthLib\JDCBOAuthTokenFactory.cs">
       <Link>JDCBOAuthTokenFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\OAuthLib\OAuth2Helper.cs">
+      <Link>OAuth2Helper.cs</Link>
     </Compile>
     <Compile Include="..\OAuthLib\OAuthHelper.cs">
       <Link>OAuthHelper.cs</Link>

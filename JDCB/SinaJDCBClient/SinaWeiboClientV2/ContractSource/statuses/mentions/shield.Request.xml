@@ -1,0 +1,67 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <PostRequest>
+    <Comment><![CDATA[<para>屏蔽某个@到我的微博以及后续由对其转发引起的@提及 </para>
+<para>URL:</para>
+<para>	https://api.weibo.com/2/statuses/mentions/shield.json</para>
+<para>支持格式:</para>
+<para>	JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST</para>
+<para>是否需要登录:</para>
+<para>	是  关于登录授权，参见 如何登录授权</para>
+<para>访问授权限制:</para>
+<para>	访问级别：高级接口（需要授权）  频次限制：是  关于频次限制，参见 接口访问权限说明</para>
+<para>注意事项:</para>
+<para>	无</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="statuses/mentions/shield.json" />
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	采用OAuth授权方式不需要此参数，其他授权方式为必填参数，数值为应用的AppKey。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="access_token">
+        <Comment><![CDATA[<para>access_token</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="id">
+        <Comment><![CDATA[<para>id</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	int64</para>
+<para>说明:</para>
+<para>	需要屏蔽的@提到我的微博ID。此ID必须在statuses/mentions列表中。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="follow_up">
+        <Comment><![CDATA[<para>follow_up</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int</para>
+<para>说明:</para>
+<para>	是否仅屏蔽当前微博。0：仅屏蔽当前@提到我的微博；1：屏蔽当前@提到我的微博，以及后续对其转发而引起的@提到我的微博。默认1。</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+  </PostRequest>
+</root>

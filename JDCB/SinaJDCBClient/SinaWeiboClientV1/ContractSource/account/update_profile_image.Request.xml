@@ -1,0 +1,47 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <MultiPartPostRequest>
+    <Comment><![CDATA[<para>更新用户头像。 </para>
+<para>URL:</para>
+<para>	http://api.t.sina.com.cn/account/update_profile_image.(json|xml)</para>
+<para>支持格式:</para>
+<para>	XML/JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST</para>
+<para>是否需要登录:</para>
+<para>	true  关于授权机制，参见授权机制声明</para>
+<para>请求数限制:</para>
+<para>	true  关于请求数限制，参见接口访问权限说明</para>
+<para>注意事项:</para>
+<para>	采用multipart/form-data编码方式提交，可以参考： Form-based File Upload in HTML</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="account/update_profile_image.json" />
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	申请应用时分配的AppKey，调用接口时候代表应用的唯一身份。（采用OAuth授权方式不需要此参数）</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+    <File>
+      <param type="Single" key="image">
+        <Comment><![CDATA[<para>image</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	binary</para>
+<para>说明:</para>
+<para>	必须为小于700K的有效的GIF, JPG图片. 如果图片大于500像素将按比例缩放。</para>
+<para></para>]]></Comment>
+      </param>
+    </File>
+  </MultiPartPostRequest>
+</root>

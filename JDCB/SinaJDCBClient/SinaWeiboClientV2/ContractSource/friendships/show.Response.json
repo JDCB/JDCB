@@ -1,0 +1,16 @@
+﻿{
+	"source": {
+		"followed_by": true,
+		"following": true,
+		"id": 1904178193,
+		"notifications_enabled": false,
+		"screen_name": "微博开放平台"
+	},
+	"target": {
+		"followed_by": true,
+		"following": true,
+		"id": 1870632073,
+		"notifications_enabled": false,
+		"screen_name": "微博API"
+	}
+}

@@ -1,0 +1,43 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <PostRequest>
+    <Comment><![CDATA[<para>删除微博收藏。注意：只能删除自己收藏的信息。 </para>
+<para>URL:</para>
+<para>	http://api.t.sina.com.cn/favorites/destroy/:id.(json|xml)</para>
+<para>支持格式:</para>
+<para>	XML/JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST/DELETE</para>
+<para>是否需要登录:</para>
+<para>	true  关于授权机制，参见授权机制声明</para>
+<para>请求数限制:</para>
+<para>	true  关于请求数限制，参见接口访问权限说明</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="favorites/destroy/{id}.json" />
+      <param type="Single" key="id">
+        <Comment><![CDATA[<para>:id</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	int64</para>
+<para>说明:</para>
+<para>	要删除的已收藏的微博消息ID。该参数为一个REST风格参数。用法参见注意事项。</para>
+<para></para>]]></Comment>
+      </param>
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	申请应用时分配的AppKey，调用接口时候代表应用的唯一身份。（采用OAuth授权方式不需要此参数）</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+  </PostRequest>
+</root>

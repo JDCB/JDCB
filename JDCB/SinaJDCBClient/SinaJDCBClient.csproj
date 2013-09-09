@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D6FB56C-721C-47E3-87B3-E197188CB4F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SinaJDCBClient</RootNamespace>
+    <AssemblyName>SinaJDCBClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinaWeiboClientV1\RequestContracts.generated.cs">
+      <DependentUpon>WeiboClient.tt</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SinaWeiboClientV1\ResponseContracts.generated.cs">
+      <DependentUpon>WeiboClient.tt</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SinaWeiboClientV1\TokenHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SinaWeiboClientV1\WeiboClient.cs">
+      <DependentUpon>WeiboClient.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SinaWeiboClientV2\RequestContracts.generated.cs">
+      <DependentUpon>WeiboClientV2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SinaWeiboClientV2\ResponseContracts.generated.cs">
+      <DependentUpon>WeiboClientV2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SinaWeiboClientV2\TokenHelper2.cs" />
+    <Compile Include="SinaWeiboClientV2\WeiboClientV2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeiboClientV2.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SinaWeiboClientV1\ContractSource\account\end_session.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\account\get_privacy.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\account\rate_limit_status.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\account\update_profile.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\account\update_profile_image.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\account\verify_credentials.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\blocks\blocking.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\blocks\blockingIds.Response.json1" />
+    <None Include="SinaWeiboClientV1\ContractSource\blocks\create.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\blocks\destroy.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\blocks\exists.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\emotions.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\favorites.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\favorites\create.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\favorites\destroy.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\favorites\destroy_batch.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\friendships\create.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\friendships\destory.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\friendships\destroy.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\friendships\exists.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\friendships\show.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\short_url\comment\comments.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\short_url\comment\counts.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\short_url\expand.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\short_url\share\counts.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\short_url\share\statuses.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\short_url\shorten.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\comment.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\comments_by_me.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\comments_timeline.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\comments_to_me.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\comment_destroy.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\comment_destroy_batch.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\counts.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\destory.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\followers.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\friends.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\friends_timeline.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\reply.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\repost.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\repost_by_me.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\repost_timeline.Reponse.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\reset_count.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\show.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\unread.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\update.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\upload.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\statuses\user_timeline.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\tags\create.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\tags\destory_batch.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\tags\suggestions.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\trends\destory.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\trends\follow.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\trends\statuses.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\trends\trends.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\users\hot.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\users\show.Response.json" />
+    <None Include="SinaWeiboClientV1\ContractSource\user\friends\update_remark.Response.json" />
+    <None Include="SinaWeiboClientV1\WeiboClient.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WeiboClient.cs</LastGenOutput>
+    </None>
+    <None Include="SinaWeiboClientV2\ContractSource\comments\by_me.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\create.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\destroy.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\destroy_batch.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\mentions.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\reply.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\show.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\show_batch.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\timeline.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\comments\to_me.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\emotions.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\create.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\destroy.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\followers.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\followers\active.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\followers\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\friends.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\friends\bilateral.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\friends\bilateral\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\friends\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\friends\in_common.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\friends_chain\followers.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\groups.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\remark\update.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\friendships\show.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\bilateral_timeline.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\count.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\destroy.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\filter\create.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\friends_timeline.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\friends_timeline\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\home_timeline.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\mentions.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\mentions\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\mentions\shield.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\public_timeline.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\queryid.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\querymid.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\repost.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\repost_by_me.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\repost_timeline.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\repost_timeline\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\show.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\to_me\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\update.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\upload.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\upload_url_text.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\user_timeline.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\statuses\user_timeline\ids.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\users\cancel_top_status.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\users\counts.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\users\domain_show.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\users\get_top_status.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\users\set_top_status.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\users\show.Response.json" />
+    <None Include="SinaWeiboClientV2\ContractSource\users\show_rank.Response.json" />
+    <None Include="SinaWeiboClientV2\WeiboClientV2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WeiboClientV2.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SinaWeiboClientV1\backup\trends\" />
+    <Folder Include="SinaWeiboClientV1\ContractSource\favorites\destroy\" />
+    <Folder Include="SinaWeiboClientV1\ContractSource\userid\statuses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SinaWeiboClientV1\ContractSource\account\end_session.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\account\get_privacy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\account\rate_limit_status.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\account\update_privacy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\account\update_profile.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\account\update_profile_image.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\account\verify_credentials.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\blocks\blocking.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\blocks\blockingIds.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\blocks\create.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\blocks\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\blocks\exists.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\emotions.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\favorites.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\favorites\create.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\favorites\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\favorites\destroy_batch.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\friendships\create.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\friendships\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\friendships\exists.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\friendships\show.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\short_url\comment\comments.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\short_url\comment\counts.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\short_url\expand.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\short_url\share\counts.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\short_url\share\statuses.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\short_url\shorten.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\socialgraph\followsIds.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\socialgraph\friendsIds.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\comment.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\comments.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\comments_by_me.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\comments_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\comments_to_me.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\comment_destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\comment_destroy_batch.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\counts.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\followers.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\friends.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\friends_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\mentions.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\reply.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\repost.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\repost_by_me.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\repost_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\reset_count.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\show.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\unread.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\update.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\upload.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\statuses\user_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\tags\create.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\tags\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\tags\destroy_batch.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\tags\suggestions.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\tags\tags.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\trends\daily.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\trends\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\trends\follow.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\trends\hourly.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\trends\statuses.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\trends\trends.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\trends\weekly.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\users\hot.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\users\show.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\users\suggestions.Request.xml" />
+    <Content Include="SinaWeiboClientV1\ContractSource\user\friends\update_remark.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\by_me.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\create.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\destroy_batch.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\mentions.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\reply.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\show.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\show_batch.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\comments\to_me.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\emotions.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\create.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\followers.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\followers\active.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\followers\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\friends.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\friends\bilateral.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\friends\bilateral\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\friends\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\friends\in_common.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\friends_chain\followers.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\groups.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\remark\update.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\friendships\show.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\bilateral_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\count.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\destroy.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\filter\create.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\friends_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\friends_timeline\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\home_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\mentions.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\mentions\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\mentions\shield.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\public_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\queryid.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\querymid.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\repost.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\repost_by_me.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\repost_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\repost_timeline\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\show.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\to_me\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\update.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\upload.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\upload_url_text.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\user_timeline.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\statuses\user_timeline\ids.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\users\cancel_top_status.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\users\counts.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\users\domain_show.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\users\get_top_status.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\users\set_top_status.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\users\show.Request.xml" />
+    <Content Include="SinaWeiboClientV2\ContractSource\users\show_rank.Request.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OAuthLib\OAuthLib.csproj">
+      <Project>{5052810e-53a6-4275-841a-47c1abbd8e8d}</Project>
+      <Name>OAuthLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestAPICore\RestAPICore.csproj">
+      <Project>{1fcacd9d-7e0c-4792-b6f3-509838bea1b3}</Project>
+      <Name>RestAPICore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

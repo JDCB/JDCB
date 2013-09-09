@@ -1,0 +1,65 @@
+﻿<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://jdcb.codeplex.com/RequestDef.xsd">
+  <PostRequest>
+    <Comment><![CDATA[<para>取消对某用户的关注。 </para>
+<para>URL:</para>
+<para>	http://api.t.sina.com.cn/friendships/destroy.(json|xml)</para>
+<para>支持格式:</para>
+<para>	XML/JSON</para>
+<para>HTTP请求方式:</para>
+<para>	POST/DELETE</para>
+<para>是否需要登录:</para>
+<para>	true  关于授权机制，参见授权机制声明</para>
+<para>请求数限制:</para>
+<para>	true  关于请求数限制，参见接口访问权限说明</para>
+<para></para>]]></Comment>
+    <URLTemplate>
+      <Template url="friendships/destroy/{id}.json" />
+      <param type="Single" key="id">
+        <Comment><![CDATA[<para>:id</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int64/string</para>
+<para>说明:</para>
+<para>	要取消关注的用户ID(int64)或者微博昵称(string)，该参数是一个REST风格的参数。用法见注意事项</para>
+<para></para>]]></Comment>
+      </param>
+    </URLTemplate>
+    <Post>
+      <param type="Single" key="source">
+        <Comment><![CDATA[<para>source</para>
+<para></para>
+<para>必选:</para>
+<para>	true</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	申请应用时分配的AppKey，调用接口时候代表应用的唯一身份。（采用OAuth授权方式不需要此参数）</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="user_id">
+        <Comment><![CDATA[<para>user_id</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	int64</para>
+<para>说明:</para>
+<para>	要取消关注的用户ID，为了避免用户的ID与微博昵称相同而产生混淆的情况，推荐使用该参数。</para>
+<para></para>]]></Comment>
+      </param>
+      <param type="Single" key="screen_name">
+        <Comment><![CDATA[<para>screen_name</para>
+<para></para>
+<para>必选:</para>
+<para>	false</para>
+<para>类型及范围:</para>
+<para>	string</para>
+<para>说明:</para>
+<para>	要取消关注的用户微博昵称，为了避免用户的ID与微博昵称相同而产生混淆的情况，推荐使用该参数。</para>
+<para></para>]]></Comment>
+      </param>
+    </Post>
+  </PostRequest>
+</root>
